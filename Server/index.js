@@ -9,12 +9,15 @@ app.use(cors());
 app.use(express.json());
 app.use(userRouter);
 app.use(todoRouter);
-const PORT = process.env.PORT;
+const PORT = process.env.PORT||9090;
 
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.path}`);
   next();
 });
+app.get("/", async (req, res) => {
+    res.send("welcome to Authentication");
+  });
 
 connectDB().then(() => {
   app.listen(PORT, () => {
