@@ -20,7 +20,7 @@ function Register() {
     };
 
     try {
-      let data = await fetch("http://localhost:8080/createUser", {
+      let data = await fetch("https://todoapp45.herokuapp.com/createUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

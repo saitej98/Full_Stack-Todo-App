@@ -19,7 +19,7 @@ function Login() {
     }
     // console.log(body);
     try {
-      let data = await fetch('http://localhost:8080/login',{
+      let data = await fetch('https://todoapp45.herokuapp.com/login',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
